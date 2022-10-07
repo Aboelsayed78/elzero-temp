@@ -1403,7 +1403,103 @@ textarea:focus, input:focus {outline: none;}
 /*========== Footer ==========*/
 .footer {
   background-color: #191919;
-  height: 100px;
+  color: #999;
+  text-transform: capitalize;
+}
+.foots {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.foots > div {
+  width: 23%;
+}
+.foots .social-links h1 {
+  color: #fff;
+  font-size: 50px;
+}
+.foots .social-links ul li {
+  display: inline-block;
+  margin: 15px 5px 15px 0;
+  width: 55px;
+  text-align: center;
+}
+.foots .social-links ul li i {
+  padding: 15px;
+  background-color: #333;
+  font-size: 22px;
+  width: 100%;
+  transition: var(--trans-dur);
+  cursor: pointer;
+}
+.foots .social-links ul li i:hover {color:#fff;}
+.foots .social-links ul li:first-child i:hover {background-color:#1877f2;}
+.foots .social-links ul li:nth-child(2) i:hover {background-color:#1da1f2;}
+.foots .social-links ul li:last-child i:hover {background-color:#ff0000;}
+.foots .social-links p {
+  line-height: 1.8;
+  font-size: 18px;
+}
+.foots .import-links ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #999;
+  transition: var(--trans-dur);
+  cursor: pointer;
+}
+.foots .import-links ul li:last-child {border-bottom: none;}
+.foots .import-links ul li:hover {
+  padding-left: 10px;
+  color: #fff;
+}
+.foots .import-links ul li i {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+.foots .contact-info ul li {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+}
+.foots .contact-info ul li i {
+  color: var(--main-color);
+  font-size: 25px;
+  width: 10%;
+}
+.foots .contact-info ul li span {
+  width: 80%;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.foots .mini-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-content: flex-start;
+}
+.foots .mini-gallery .image {
+  width: 32%;
+  padding: 2px;
+  height: 75px;
+  background-color: #eee;
+}
+.foots .mini-gallery .image img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 991px) {
+  .foots > div {width: 48%;}
+  .foots .import-links, .foots .mini-gallery {display: none;}
+}
+@media (max-width: 767px) {
+  .foots {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px 0;
+  }
+  .foots > div {width: 80%;}
+  .foots .import-links, .foots .mini-gallery {display: none;}
 }
 
 /*========== Animations ==========*/
