@@ -169,6 +169,7 @@
     </div>
   </div>
 
+  <div class="spikes"></div>
   <!-- Gallery -->
   <div class="gallery" id="gallery">
     <div class="contain">
@@ -455,6 +456,7 @@
     </div>
   </div>
   
+  <div class="spikes"></div>
   <!-- Services -->
   <div class="services" id="services">
     <div class="contain">
@@ -537,19 +539,23 @@
         <div class="skill-cont">
           <div class="skill">
             <p>html</p>
-            <div class="skill-bar"><span>90%</span></div>
+            <span class="progress">90%</span>
+            <div class="skill-bar"><span class="prog-bar" data-skill="90%"></span></div>
           </div>
           <div class="skill">
             <p>css</p>
-            <div class="skill-bar"><span>75%</span></div>
+            <span class="progress">75%</span>
+            <div class="skill-bar"><span class="prog-bar" data-skill="75%"></span></div>
           </div>
           <div class="skill">
             <p>java</p>
-            <div class="skill-bar"><span>45%</span></div>
+            <span class="progress">45%</span>
+            <div class="skill-bar"><span class="prog-bar" data-skill="45%"></span></div>
           </div>
           <div class="skill">
             <p>php</p>
-            <div class="skill-bar"><span>60%</span></div>
+            <span class="progress">60%</span>
+            <div class="skill-bar"><span class="prog-bar" data-skill="60%"></span></div>
           </div>
         </div>
       </div>
@@ -602,19 +608,19 @@
         <div class="event-cont">
           <div class="event-timer">
             <div class="time">
-              <p>90</p>
+              <p id="days"></p>
               <span>days</span>
             </div>
             <div class="time">
-              <p>08</p>
+              <p id="hours"></p>
               <span>hours</span>
             </div>
             <div class="time">
-              <p>43</p>
+              <p id="minutes"></p>
               <span>minutes</span>
             </div>
             <div class="time">
-              <p>26</p>
+              <p id="seconds"></p>
               <span>seconds</span>
             </div>
           </div>
@@ -631,6 +637,7 @@
     </div>
   </div>
 
+  <div class="spikes"></div>
   <!-- Pricing Plans -->
   <div class="pricing" id="pricing">
     <div class="contain">
@@ -761,22 +768,22 @@
       <div class="stats-cont">
         <div class="stat">
           <i class="fas fa-user"></i>
-          <h1>150</h1>
+          <h1 class="num" data-goal="150">0</h1>
           <p>clients</p>
         </div>
         <div class="stat">
           <i class="fas fa-code"></i>
-          <h1>135</h1>
+          <h1 class="num" data-goal="250">0</h1>
           <p>projects</p>
         </div>
         <div class="stat">
           <i class="fas fa-globe-asia"></i>
-          <h1>50</h1>
+          <h1 class="num" data-goal="50">0</h1>
           <p>company</p>
         </div>
         <div class="stat">
           <i class="fas fa-money-bill-alt"></i>
-          <h1>500</h1>
+          <h1 class="num" data-goal="500">0</h1>
           <p>money</p>
         </div>
       </div>
@@ -863,6 +870,6 @@
       </div>
     </div>
   </div>
-
+  <script src="script.js"></script>
 </body>
 </html>

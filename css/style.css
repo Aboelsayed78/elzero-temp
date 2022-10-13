@@ -76,6 +76,22 @@ textarea:focus, input:focus {outline: none;}
 .sec-title:hover::before {animation: left-move 0.5s linear forwards;}
 .sec-title:hover::after {animation: right-move 0.5s linear forwards;}
 
+/* Spikes Separator */
+.spikes {
+  position: relative;
+}
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient(135deg, #fff 25%, transparent 25%), 
+                    linear-gradient(-135deg, #fff 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+
 /* Media Queries */
 @media (max-width: 767px) {.contain {width: 95%;}}
 @media (min-width: 768px) {.contain {width: 750px;}}
@@ -788,32 +804,17 @@ textarea:focus, input:focus {outline: none;}
 }
 .main-cont img {width: 45%;}
 .skill-cont {width: 53%;}
-.skill {margin-bottom: 30px;}
+.skill {
+  margin-bottom: 30px;
+  position: relative;
+}
 .skill p {
   font-size: 20px;
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
-.skills .main-cont .skill-cont .skill .skill-bar {
-  position: relative;
-  width: 100%;
-  height: 30px;
-  background-color: #eee;
-}
-.skill:first-child .skill-bar::before {width: 90%;}
-.skill:nth-child(2) .skill-bar::before {width: 75%;}
-.skill:nth-child(3) .skill-bar::before {width: 45%;}
-.skill:last-child .skill-bar::before {width: 60%;}
-.skill-bar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--main-color);
-  height: 100%;
-}
-.skill-bar span {
+.skill .progress {
   padding: 3px 5px;
   background-color: transparent;
   border: 1px solid var(--main-color);
@@ -822,7 +823,21 @@ textarea:focus, input:focus {outline: none;}
   font-size: 15px;
   position: absolute;
   right: 0;
-  top: -40px;
+  top: 0;
+}
+.skill-bar {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #eee;
+}
+.skill-bar .prog-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  height: 100%;
+  transition: var(--trans-dur);
 }
 
 @media (max-width: 991px) {
@@ -916,7 +931,7 @@ textarea:focus, input:focus {outline: none;}
   justify-content: center;
 }
 .event-cont .event-timer .time {
-  width: 10%;
+  width: 12%;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 0 10px;
@@ -988,7 +1003,7 @@ textarea:focus, input:focus {outline: none;}
 }
 
 @media (max-width: 991px) {
-  .event-cont .event-timer .time {width: 15%;}
+  .event-cont .event-timer .time {width: 16%;}
   .event-cont .event-timer .time p {font-size: 30px;}
   .event-cont .event-text {margin-top: 30px;}
   .event-cont .event-text h1 {font-size: 25px;}
@@ -998,7 +1013,7 @@ textarea:focus, input:focus {outline: none;}
 @media (max-width: 767px) {
   .main-event img {display: none;}
   .event-cont {width: 100%;}
-  .event-cont .event-timer .time {width: 60px}
+  .event-cont .event-timer .time {width: 70px}
   .subscribe {
     padding: 15px;
     width: 95%;
